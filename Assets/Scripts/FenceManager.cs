@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FenceManager : MonoBehaviour
 {
+    [SerializeField] List<GameObject> obstacles;
     [SerializeField] GameObject fencePrefab;
     List<GameObject> fences = new List<GameObject>();
     [SerializeField] float fenceSpeed = 1f;
@@ -32,10 +33,10 @@ public class FenceManager : MonoBehaviour
             currentSpawnTime += Time.deltaTime;
             if (currentSpawnTime > spawnTime)
             {
+                int rand = Random.Range(0, obstacles.Count);
                 currentSpawnTime = 0;
-                GameObject newFence = Instantiate(fencePrefab, spawnPos, fencePrefab.transform.rotation);
-                fences.Add(newFence);
-
+                GameObject newObstacle = Instantiate(obstacles[rand], obstacles[rand].transform.position, obstacles[rand].transform.rotation);
+                fences.Add(newObstacle);
                 spawnTime = Random.Range(startingSpawnTime - spawnTimeRand, startingSpawnTime + spawnTimeRand);
             }
 
