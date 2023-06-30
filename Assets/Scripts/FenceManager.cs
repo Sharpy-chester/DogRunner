@@ -44,11 +44,20 @@ public class FenceManager : MonoBehaviour
             {
                 foreach (GameObject fence in fences)
                 {
-                    fence.transform.position -= new Vector3(fenceSpeed * Time.deltaTime, 0, 0);
-                    if (fence.transform.position.x < fenceDeletePosX)
+                    if(fence)
                     {
-                        fences.Remove(fence);
-                        Destroy(fence);
+                        fence.transform.position -= new Vector3(fenceSpeed * Time.deltaTime, 0, 0);
+                        if (fence.transform.position.x < fenceDeletePosX)
+                        {
+                            Destroy(fence);
+                        }
+                    }
+                }
+                for (int i = 0; i < fences.Count; i++)
+                {
+                    if(fences[i] == null)
+                    {
+                        fences.RemoveAt(i);
                         return;
                     }
                 }

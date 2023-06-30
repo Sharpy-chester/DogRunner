@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip jumpLandingSound;
     [SerializeField] AudioClip jumpingSound;
     [SerializeField] AudioClip deathSound;
+    [SerializeField] AudioClip explosionSound;
 
     [Header("Input")]
     Vector2 swipeStartPos;
@@ -155,6 +156,7 @@ public class PlayerController : MonoBehaviour
                 {
                     collision.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().enabled = false;
                 }
+                AudioManager.Instance.PlaySFX(explosionSound);
                 Instantiate(explosionGO, collision.transform.position, Quaternion.identity);
                 Destroy(collision.transform.GetComponent<Rigidbody>());
                 foreach (Collider col in collision.transform.GetComponents<Collider>())

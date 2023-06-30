@@ -1528,8 +1528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af01ebaaf1a1e584ab7924e71a8da713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupTypes:
-  - {fileID: 5590525892711283379, guid: 921a1a7f8769bc64e88b55572214913f, type: 3}
   powerupPrefab: {fileID: 181038083173175200, guid: 921a1a7f8769bc64e88b55572214913f, type: 3}
   rangeBetweenPowerups: {x: 15, y: 30}
   xPosDestroy: -10
@@ -2541,11 +2539,12 @@ MonoBehaviour:
   jumpLandingSound: {fileID: 8300000, guid: d1517b78b632a014c98b267b76eb9eba, type: 3}
   jumpingSound: {fileID: 8300000, guid: 297f88879acba224081c17ef562c190c, type: 3}
   deathSound: {fileID: 8300000, guid: 4d9f59308cadd2641810e444baff2b9b, type: 3}
+  explosionSound: {fileID: 8300000, guid: 2b007e9c377f92242aa707c9fd11854a, type: 3}
   minimumSwipeDist: 0.1
   invin: 0
   powerupTimer: 10
   colourChange: {r: 0, g: 0.37443805, b: 1, a: 1}
-  explosionGO: {fileID: 0}
+  explosionGO: {fileID: 8383293966293406635, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
 --- !u!95 &919132149346860702
 Animator:
   serializedVersion: 5
@@ -2596,60 +2595,3 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 122
   m_CollisionDetection: 3
---- !u!1001 &8383293966303402829
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406628, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383293966293406635, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}
-      propertyPath: m_Name
-      value: Explosion
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a1546fbb4ce89a34190616bbc5098401, type: 3}

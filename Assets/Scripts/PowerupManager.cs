@@ -31,11 +31,21 @@ public class PowerupManager : MonoBehaviour
         {
             foreach (GameObject powerup in powerups)
             {
-                powerup.transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
-                if (powerup.transform.position.x < xPosDestroy)
+                if(powerup)
                 {
-                    powerups.Remove(powerup);
-                    Destroy(powerup);
+                    powerup.transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
+                    if (powerup.transform.position.x < xPosDestroy)
+                    {
+                        Destroy(powerup);
+                    }
+                }
+            }
+            for (int i = 0; i < powerups.Count; i++)
+            {
+                if (powerups[i] == null)
+                {
+                    powerups.RemoveAt(i);
+                    return;
                 }
             }
         }
